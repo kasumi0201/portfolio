@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   end
 
-  def aboutme
+  def study
 
   end
 

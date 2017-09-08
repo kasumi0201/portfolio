@@ -9,39 +9,33 @@ p{
 .nav-item{
   padding: 20px;
 }
+// ＝＝＝＝＝＝＝doors＝＝＝＝＝＝＝＝＝＝＝
 
-
-/* gatefold */
-.gatefold {
- width: 100%;
- height: 100%;
-}
-/* 左の画像 */
+/* left pic */
 .gatefold::before {
-    left: 0;
-    clip: rect(0px 50vw 100vh 0px);
+  left: 0;
+  clip: rect(0px 50vw 100vh 0px);
 }
 
-/* 右の画像 */
+/* right pic */
 .gatefold::after {
-    right: 0;
-    clip: rect(0px 100vw 100vh 50vw);
+  right: 0;
+  clip: rect(0px 100vw 100vh 50vw);
 }
 
 .gatefold::before,
 .gatefold::after {
  content: '';
- position: fixed;
- top: 0;
- width: 100%;
- height: 100vh;
- background: url(mainpic.png) top center no-repeat;
- background-size: cover;
- -webkit-transition: all 1s;
- transition: all 1s;
- z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: url(mainpic.png) top center no-repeat;
+  background-size: cover;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  z-index: 1;
 }
-
 
 .gatefold::before {
  left: 0;
@@ -53,94 +47,61 @@ p{
  clip: rect(0px 100vw 100vh 50vw);
 }
 
-/* contents */
-.header,
+
+// ＝＝＝＝＝＝＝/* contents */＝＝＝＝＝＝＝＝＝＝＝
+
 .contents,
 .footer {
  max-width: 1000px;
  margin: 0 auto;
- padding: 80px 0;
+ padding: 10% 0;
  text-align: center;
 }
 
-.contents {
- padding: 0;
+.header{
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.contents__inner {
- box-sizing: border-box;
- max-width: 680px;
- height: 100%;
- margin: 40px auto 0;
- padding: 20px;
- text-align: left;
- background: #eee;
-}
-
-.contents__inner h2 {
- padding: 10px;
- font-size: 20px;
- font-weight: bold;
- border-bottom: 1px solid #666;
-}
-
-.btn__box {
- text-align: center;
-}
-
-.btn__box a {
- display: inline-block;
- width: 250px;
- height: 50px;
- margin: 0 auto;
- line-height: 50px;
- font-size: 13px;
- color: #000;
- border: 1px solid #000;
-}
-
-/* checkbox */
-.check {
- display: none;
-}
+// ＝＝＝＝＝＝＝buttom for doors＝＝＝＝＝＝＝＝＝＝＝
 
 .switch {
  position: fixed;
  left: 0;
  right: 0;
- width: 300px;
- height: 140px;
  margin: auto;
- font-size: 80px;
+ font-size: 400%;
  font-weight: bold;
  text-align: center;
  cursor: pointer;
- text-shadow: 5px 5px 10px rgba(0,0,0,.8);
- color: #fff;
+ text-shadow: 4px 4px 4px #ccc;
+ color: #FFF;
  -webkit-transition: all .5s;
  transition: all .5s;
  visibility: visible;
- opacity: 1;
  z-index: 2;
 }
 
 .switch.push {
- top: 50%;
+ top: 80%;
 }
 
 .switch.push::before {
- content: 'OPEN';
+ content: 'Welcome to my portfolio';
  -webkit-transition: all .5s;
  transition: all .5s;
-  opacity: 0.4;
+  opacity: 0.9;
 }
 
 .check.push:checked ~ .switch.push::before {
- content: 'CLOSE';
+ content: '▼';
  -webkit-transition: all .5s;
  transition: all .5s;
- opacity: 0.3;
+ opacity: 0.7;
 }
+
+// ＝＝＝＝＝＝＝doors action＝＝＝＝＝＝＝＝＝＝＝
 
 .check.push ~ .gatefold::before {
  -webkit-transform-origin: left center;
@@ -162,28 +123,114 @@ p{
  transform: perspective(1500px) rotateY(-50deg);
 }
 
-// ここから自分の
+// ＝＝＝＝＝＝＝ top logo＝＝＝＝＝＝＝＝＝＝＝
 
-.container1,.logo{
+.logo{
   height:60px;
   float: left;
 }
+
+// ＝＝＝＝＝＝＝ menu bar using bootstrap＝＝＝＝＝＝＝＝＝＝＝
 
 .justify-content-center{
   padding-top: 20px;
   padding-bottom: 0;
   margin: 0 auto;
   font-size: 28px;
+  width: 50%;
   font-family: 'Courier New',sans-serif;
 }
 
-a:link	{
-  color : #81C427;
+a{
+  color : #81C427!important;
 }
+
 a:hover{
-  color:#965008!important;
+  color:#ecf9e3!important;
   text-decoration: none!important;
 }
-a:visited	{
- color : #eb9134;
+// ＝＝＝＝＝＝＝image for body 3 /page/study 3＝＝＝＝＝＝＝＝＝＝＝
+.snip1352{
+  margin-bottom: 100px;
+  width: 50%;
+  height: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 10px 20px -10px rgba(0, 0, 0, 0.9);
+}
+
+// ＝＝＝＝image zoom in ＝＝＝＝
+
+img.snip1352 {
+  max-width: 100%;
+  vertical-align: top;
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
+
+img.snip1352:hover ,
+img.snip1352.hover {
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+// ＝＝＝＝＝＝＝＝contact name and email＝＝＝＝＝＝＝＝＝＝
+
+.text1{
+  text-align: center;
+  padding: 4%;
+}
+.contents {
+  padding: 0;
+}
+
+.contents__inner {
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  margin: 40px auto 0;
+  padding: 20px;
+  text-align: left;
+  background: #FFF;
+  box-shadow: 5px 10px 20px -10px rgba(0, 0, 0, 0.9);
+}
+
+.contents__inner:hover{
+  animation: shake 0.5s linear infinite;
+  -webkit-animation: shake 0.5s linear infinite;
+}
+
+@keyframes shake {
+0% { transform: translate(3px, 2px) rotate(0deg); }
+10% { transform: translate(-2px, -3px) rotate(-1deg); }
+20% { transform: translate(-4px, 0px) rotate(1deg); }
+30% { transform: translate(0px, 3px) rotate(0deg); }
+40% { transform: translate(2px, -2px) rotate(1deg); }
+50% { transform: translate(-2px, 3px) rotate(-1deg); }
+60% { transform: translate(-4px, 2px) rotate(0deg); }
+70% { transform: translate(3px, 2px) rotate(-1deg); }
+80% { transform: translate(-2px, -2px) rotate(1deg); }
+90% { transform: translate(2px, 4px) rotate(0deg); }
+100% { transform: translate(2px, -3px) rotate(-1deg); }
+}
+
+// ＝＝＝＝＝＝＝＝for small screen device＝＝＝＝＝＝＝＝＝＝
+
+@media screen and (max-width: 320px) {
+  li.nav-item{
+  padding: 0 auto;
+    a{
+    font-size: 12px;
+    }
+  }
+
+  .contents__inner{
+    width: 80%;
+    padding: 0;
+    margin: 0 auto;
+    }
+  .footer{
+    margin-top: 15%;
+    margin-bottom: 15%;
+    }
 }

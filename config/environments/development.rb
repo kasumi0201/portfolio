@@ -27,20 +27,18 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.raise_delivery_errors = true
-  # config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: 'localhost:3000' }
-  config.action_mailer.delivery_method = :sendmail   # ←追加！
-  # config.action_mailer.smtp_settings = {
-  #   :address => "smtp.gmail.com", # SMTPサーバのアドレス
-  #   :port => 587, # SMTPサーバに接続するポート番号
-  #   :user_name => "kasumi0201@gmail.com", # SMTPサーバを使うためのユーザアカウント
-  #   :password => "42372370", # ユーザアカウントのパスワード
-  #   :authentication => :plain, # たいてい:plainでOK
-  #   :enable_starttls_auto => true
-  # }
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      port:                 587,
+      address:              'smtp.gmail.com',
+      domain:               'gmail.com',
+      user_name:            'kasumi0201@gmail.com',
+      password:             '42372370',
+      authentication:       'login',
+      enable_starttls_auto: true
+    }
 
   config.action_mailer.perform_caching = false
 
